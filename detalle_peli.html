@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Cinema - Detalles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/detalle_peli.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <span class="material-symbols-outlined IconoLogo">arrow_back</span>
+            <h1>CINE CINEMA</h1>
+        </div>
+        <div class="Notificaciones">
+            <button class="BotonNotificacion material-symbols-outlined">notifications</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="PeliculaHero">
+            <div class="InfoHero">
+                <div class="Etiquetas">
+                    <span class="EtiquetaEstreno">ESTRENO</span>
+                    <span class="EtiquetaImax">2D+3D</span>
+                </div>
+                <h1 class="TituloPelicula">EL DESPERTAR DE LA RED</h1>
+                <div class="MetaData">
+                    <span><span class="material-symbols-outlined">schedule</span> 142 min</span>
+                    <span><span class="material-symbols-outlined">star</span> 4.8</span>
+                    <span><span class="material-symbols-outlined">subtitles</span> Sub/Esp</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="Sinopsis">
+            <h3 class="SeccionTitulo">SINOPSIS</h3>
+            <p>En un futuro donde la realidad virtual ha reemplazado la interacción física, un joven programador descubre un código ancestral que podría colapsar toda la infraestructura digital del planeta. Ahora debe elegir entre el orden establecido o la libertad absoluta en el mundo real.</p>
+        </section>
+
+        <section class="Fechas">
+            <div class="SeccionTitulo">
+                <span>FECHA</span>
+                <span class="SeccionSubtitulo">Mayo 2024</span>
+            </div>
+            <div class="SelectorFechas">
+                <button class="BotonFecha Activo">
+                    <span class="dia">HOY</span>
+                    <span class="numero">24</span>
+                </button>
+                <button class="BotonFecha">
+                    <span class="dia">SÁB</span>
+                    <span class="numero">25</span>
+                </button>
+                <button class="BotonFecha">
+                    <span class="dia">DOM</span>
+                    <span class="numero">26</span>
+                </button>
+                <button class="BotonFecha">
+                    <span class="dia">LUY</span>
+                    <span class="numero">27</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="Horarios">
+            <h3 class="SeccionTitulo">HORARIOS</h3>
+            <div class="GrillaHorarios">
+                <div class="TarjetaHora">
+                    <span class="hora">15:00 HS</span>
+                    <span class="sala">SALA 4 - 2D</span>
+                </div>
+                <div class="TarjetaHora Activo">
+                    <span class="hora">18:30 HS</span>
+                    <span class="sala">SALA 2 - IMAX</span>
+                </div>
+                <div class="TarjetaHora">
+                    <span class="hora">21:00 HS</span>
+                    <span class="sala">SALA 4 - 2D</span>
+                </div>
+                <div class="TarjetaHora">
+                    <span class="hora">23:45 HS</span>
+                    <span class="sala">SALA 1 - 3D</span>
+                </div>
+            </div>
+        </section>
+
+        <button class="BotonReservar">
+            <span class="material-symbols-outlined">event_seat</span> RESERVAR ASIENTOS
+        </button>
+    </main>
+
+    <nav class="Navegacion">
+        <a href="#" class="EnlaceNav Activo">
+            <span class="material-symbols-outlined">movie_filter</span>
+            <span>Cartelera</span>
+        </a>
+        <a href="#" class="EnlaceNav">
+            <span class="material-symbols-outlined">search</span>
+            <span>Buscar</span>
+        </a>
+        <a href="#" class="EnlaceNav">
+            <span class="material-symbols-outlined">person</span>
+            <span>Perfil</span>
+        </a>
+    </nav>
+</body>
+</html>

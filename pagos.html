@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago y Confirmación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pagos.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <span class="material-symbols-outlined IconoLogo">movie</span>
+            <h1>CINE CINEMA</h1>
+        </div>
+        <button class="BotonCerrar material-symbols-outlined">close</button>
+    </header>
+
+    <main>
+        <section class="SeccionResumen">
+            <h2>Resumen de tu selección</h2>
+            
+            <div class="TarjetaResumenPelicula">
+                <div class="PosterResumen">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46PuW1OMrZ2c3hUHc4qMViL_4of9bUWY5JOrHne1PxNvRUsZcsn9gM8c1cCPcyiXTh4kniPf5QOhpoxCapFEkVePzUbRxu_O03X6yYFamyzbITyJknXktg1Frb-JoazIhObUX5hgi0BR4CXEp2E_Ed0XFrO3vY0daNPorrt4aZZALs24xU5ctKWiMC5PF2EVE5m5jdVuueuC_BHZtxsKWEOPdNe6WmvAeEu6xDiiLRDIl0_icWBZ2FQYiw6Bzrb8atUiFUgJaHs8" alt="Interstellar II">
+                </div>
+                <div class="InfoResumenPelicula">
+                    <h3>Interstellar II</h3>
+                    <ul class="DetallesResumen">
+                        <li>
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>Hoy, 22:30 PM</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">event_seat</span>
+                            <span>Asientos: H12, H13</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">confirmation_number</span>
+                            <span>2 x Entradas General</span>
+                        </li>
+                    </ul>
+                    <div class="FilaTotal">
+                        <span>TOTAL</span>
+                        <span class="PrecioTotalResumen">$18.500</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="SeccionDatos">
+            <h2>Tus Datos</h2>
+            <form>
+                <div class="GrupoInput">
+                    <label>Nombre completo *</label>
+                    <input type="text" placeholder="Ej. Julian Casablancas">
+                </div>
+                <div class="GrupoInput">
+                    <label>Correo electrónico *</label>
+                    <input type="email" placeholder="tu@email.com">
+                </div>
+                <div class="GrupoInput">
+                    <label>Teléfono (opcional)</label>
+                    <input type="tel" placeholder="+56 9 1234 5678">
+                </div>
+
+                <button type="submit" class="BotonFinalizarCompra">
+                    Finalizar Compra <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+                <p class="TerminosCondiciones">Al hacer click, aceptas nuestros términos y condiciones.</p>
+            </form>
+        </section>
+    </main>
+
+    <nav class="Navegacion">
+        <a href="#" class="EnlaceNav">
+            <span class="material-symbols-outlined">movie_filter</span>
+            <span>Cartelera</span>
+        </a>
+        <a href="#" class="EnlaceNav Activo">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span>Compra</span>
+        </a>
+        <a href="#" class="EnlaceNav">
+            <span class="material-symbols-outlined">person</span>
+            <span>Perfil</span>
+        </a>
+    </nav>
+</body>
+</html>
