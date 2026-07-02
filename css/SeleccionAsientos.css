@@ -9,7 +9,7 @@ body {
     color: #ffdad5;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     min-height: 100vh;
-    padding-bottom: 80px;
+    padding-bottom: 180px;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -29,12 +29,12 @@ body {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-header, main, .Navegacion {
+header, main, .BarraPago, .Navegacion {
     max-width: 448px;
     margin: 0 auto;
 }
 
-header {
+.HeaderAsientos {
     position: fixed;
     top: 0;
     left: 0;
@@ -49,26 +49,32 @@ header {
     border-bottom: 1px solid rgba(94, 63, 59, 0.15);
 }
 
-.Logo {
+.HeaderIzquierdo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.Logo .IconoLogo {
-    font-size: 28px;
+.HeaderIzquierdo .material-symbols-outlined {
     color: #ffb4aa;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 9999px;
 }
 
-.Logo h1 {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #e50914;
-    text-transform: uppercase;
+.InfoPeliculaHeader h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
 }
 
-.BotonCerrar {
+.InfoPeliculaHeader p {
+    font-size: 11px;
+    color: #e9bcb6;
+}
+
+.BotonInformacion {
     background: none;
     border: none;
     color: #ffb4aa;
@@ -78,145 +84,177 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.2s, transform 0.2s;
-}
-
-.BotonCerrar:active {
-    transform: scale(0.95);
 }
 
 main {
     padding: 80px 16px 24px 16px;
 }
 
-.SeccionResumen, .SeccionDatos {
-    margin-bottom: 32px;
-}
-
-.SeccionResumen h2, .SeccionDatos h2 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #e50914;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    letter-spacing: 0.05em;
-}
-
-.TarjetaResumenPelicula {
-    display: flex;
-    gap: 16px;
-    background-color: #1a0908;
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(94, 63, 59, 0.15);
-}
-
-.PosterResumen {
-    width: 90px;
-    height: 135px;
-    border-radius: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background-color: #462f2c;
-}
-
-.PosterResumen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.InfoResumenPelicula {
-    flex: 1;
+.SeccionAsientos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.InfoResumenPelicula h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 8px;
-}
-
-.DetallesResumen {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 12px;
-}
-
-.DetallesResumen li {
-    display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    color: #e9bcb6;
-}
-
-.DetallesResumen li .material-symbols-outlined {
-    font-size: 16px;
-}
-
-.FilaTotal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(94, 63, 59, 0.25);
-    padding-top: 8px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.FilaTotal span:first-child {
-    color: #ffffff;
-}
-
-.FilaTotal .PrecioTotalResumen {
-    color: #ffb4aa;
-    font-size: 18px;
-}
-
-.GrupoInput {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-}
-
-.GrupoInput label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #e9bcb6;
-}
-
-.GrupoInput input {
     width: 100%;
-    height: 44px;
-    padding: 0 16px;
-    border-radius: 12px;
-    border: 1px solid #3a2020;
-    background-color: #1a0a0a;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
 }
 
-.GrupoInput input:focus {
-    border-color: #e50914;
-}
-
-.BotonFinalizarCompra {
+.Pantalla {
+    width: 80%;
+    height: 8px;
+    border-bottom: 4px solid #e50914;
+    border-radius: 50% / 100% 100% 0 0;
+    box-shadow: 0 -10px 30px rgba(229, 9, 20, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.Pantalla span {
+    font-size: 10px;
+    font-weight: 700;
+    color: #e9bcb6;
+    letter-spacing: 0.3em;
+    position: absolute;
+    top: 16px;
+    white-space: nowrap;
+}
+
+.MapaAsientos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
     width: 100%;
-    height: 50px;
+}
+
+.FilaAsientos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.LetraFila {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e9bcb6;
+    width: 16px;
+    text-align: center;
+}
+
+.AsientosContenedor {
+    display: flex;
+    gap: 8px;
+}
+
+.Asiento {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    background-color: #2F2F2F;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    outline: none;
+}
+
+.Asiento.Ocupado {
+    background-color: #121212;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.Asiento.Seleccionado {
+    background-color: #e50914;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.6);
+}
+
+.LeyendaAsientos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 320px;
+    background-color: rgba(46, 26, 24, 0.3);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(94, 63, 59, 0.1);
+}
+
+.ItemLeyenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #e9bcb6;
+}
+
+.Muestra {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.Muestra.Libre {
+    background-color: #2F2F2F;
+}
+
+.Muestra.Ocupado {
+    background-color: #121212;
+    opacity: 0.3;
+}
+
+.Muestra.Seleccionado {
+    background-color: #e50914;
+}
+
+.BarraPago {
+    position: fixed;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    background-color: #1a0908;
+    border-top: 1px solid rgba(94, 63, 59, 0.2);
+    padding: 16px;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.InfoPago {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.InfoPago p {
+    font-size: 11px;
+    color: #e9bcb6;
+    margin-bottom: 4px;
+}
+
+.InfoPago span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.TotalPago {
+    text-align: right;
+}
+
+.TotalPago .PrecioTotal {
+    color: #ffb4aa;
+    font-size: 20px;
+}
+
+.BotonContinuar {
+    width: 100%;
+    height: 48px;
     background-color: #e50914;
     color: #ffffff;
     border: none;
@@ -224,20 +262,11 @@ main {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 24px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.BotonFinalizarCompra:active {
+.BotonContinuar:active {
     transform: scale(0.97);
-}
-
-.TerminosCondiciones {
-    font-size: 11px;
-    color: #e9bcb6;
-    text-align: center;
-    margin-top: 12px;
-    opacity: 0.8;
 }
 
 .Navegacion {
@@ -286,9 +315,9 @@ main {
 
 @media (min-width: 768px) {
     body {
-        padding-bottom: 0;
+        padding-bottom: 110px;
     }
-    header, main, .Navegacion {
+    header, main, .BarraPago, .Navegacion {
         max-width: 1000px;
     }
     .Navegacion {
@@ -309,13 +338,11 @@ main {
         gap: 8px;
         pointer-events: auto;
     }
-    main {
-        display: flex;
-        gap: 32px;
-        align-items: flex-start;
+    .BarraPago {
+        bottom: 0;
+        border-bottom: none;
     }
-    .SeccionResumen, .SeccionDatos {
-        flex: 1;
-        margin-bottom: 0;
+    .Pantalla {
+        width: 60%;
     }
 }
