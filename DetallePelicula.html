@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="Logo">
-            <span class="material-symbols-outlined IconoLogo">arrow_back</span>
+            <a href="homepage.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"><span class="material-symbols-outlined IconoLogo">arrow_back</span></a>
             <h1>CINE CINEMA</h1>
         </div>
         <div class="Notificaciones">
@@ -87,17 +87,17 @@
             </div>
         </section>
 
-        <button class="BotonReservar">
+        <a href="SeleccionAsientos.html" class="BotonReservar" style="text-decoration: none;">
             <span class="material-symbols-outlined">event_seat</span> RESERVAR ASIENTOS
-        </button>
+        </a>
     </main>
 
     <nav class="Navegacion">
-        <a href="#" class="EnlaceNav Activo">
+        <a href="homepage.html" class="EnlaceNav Activo">
             <span class="material-symbols-outlined">movie_filter</span>
             <span>Cartelera</span>
         </a>
-        <a href="#" class="EnlaceNav">
+        <a href="busqueda.html" class="EnlaceNav">
             <span class="material-symbols-outlined">search</span>
             <span>Buscar</span>
         </a>
@@ -106,5 +106,33 @@
             <span>Perfil</span>
         </a>
     </nav>
+
+    <script src="JavaScript/peliculas.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id') || 'thebatman';
+        const peli = peliculas[movieId];
+
+        if (peli) {
+            document.querySelector('.TituloPelicula').textContent = peli.titulo;
+            document.querySelector('.Sinopsis p').textContent = peli.sinopsis;
+            document.querySelector('.EtiquetaEstreno').textContent = peli.estreno;
+            document.querySelector('.EtiquetaImax').textContent = peli.sala;
+            
+            const metaSpans = document.querySelectorAll('.MetaData > span');
+            if (metaSpans.length >= 3) {
+                metaSpans[0].innerHTML = `<span class="material-symbols-outlined">schedule</span> ${peli.duracion}`;
+                metaSpans[1].innerHTML = `<span class="material-symbols-outlined">star</span> ${peli.calificacion}`;
+                metaSpans[2].innerHTML = `<span class="material-symbols-outlined">subtitles</span> ${peli.idioma}`;
+            }
+
+            document.querySelector('.PeliculaHero').style.backgroundImage = `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 60%, #000000 100%), url(${peli.imagen})`;
+
+            const reservBtn = document.querySelector('.BotonReservar');
+            if (reservBtn) {
+                reservBtn.href = `SeleccionAsientos.html?id=${movieId}`;
+            }
+        }
+    </script>
 </body>
 </html>

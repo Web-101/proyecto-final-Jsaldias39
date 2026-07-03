@@ -11,7 +11,7 @@
 <body>
     <header class="HeaderAsientos">
         <div class="HeaderIzquierdo">
-            <span class="material-symbols-outlined">arrow_back</span>
+            <a href="DetallePelicula.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"><span class="material-symbols-outlined">arrow_back</span></a>
             <div class="InfoPeliculaHeader">
                 <h1>Oppenheimer</h1>
                 <p>Hoy 19:30 Sala 04</p>
@@ -169,15 +169,15 @@
                 <span class="PrecioTotal">$0.00</span>
             </div>
         </div>
-        <button class="BotonContinuar">Continuar</button>
+        <a href="pagos.html" class="BotonContinuar" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">Continuar</a>
     </div>
 
     <nav class="Navegacion">
-        <a href="#" class="EnlaceNav">
+        <a href="homepage.html" class="EnlaceNav">
             <span class="material-symbols-outlined">movie_filter</span>
             <span>Cartelera</span>
         </a>
-        <a href="#" class="EnlaceNav Activo">
+        <a href="SeleccionAsientos.html" class="EnlaceNav Activo">
             <span class="material-symbols-outlined">shopping_cart</span>
             <span>Compra</span>
         </a>
@@ -186,5 +186,48 @@
             <span>Perfil</span>
         </a>
     </nav>
+
+    <script src="JavaScript/peliculas.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id') || 'thebatman';
+        const peli = peliculas[movieId];
+        const titulo = peli ? peli.titulo : "Oppenheimer";
+
+        document.querySelector('.InfoPeliculaHeader h1').textContent = titulo;
+        
+        document.querySelector('.HeaderIzquierdo a').href = `DetallePelicula.html?id=${movieId}`;
+        document.querySelector('.BotonContinuar').href = `pagos.html?id=${movieId}`;
+
+        // Selección Interactiva de Asientos
+        const asientos = document.querySelectorAll('.Asiento:not(.Ocupado)');
+        const cantSeleccion = document.querySelector('.CantidadSeleccion');
+        const precioTotal = document.querySelector('.PrecioTotal');
+        const precioUnitario = 9250;
+
+        let seleccionados = [];
+
+        asientos.forEach((asiento) => {
+            const fila = asiento.parentElement.parentElement.querySelector('.LetraFila').textContent;
+            const hermanos = Array.from(asiento.parentElement.children);
+            const numero = hermanos.indexOf(asiento) + 1;
+            const nombreAsiento = `${fila}${numero}`;
+
+            asiento.addEventListener('click', () => {
+                asiento.classList.toggle('Seleccionado');
+                if (asiento.classList.contains('Seleccionado')) {
+                    seleccionados.push(nombreAsiento);
+                } else {
+                    seleccionados = seleccionados.filter(item => item !== nombreAsiento);
+                }
+
+                cantSeleccion.textContent = seleccionados.length > 0 ? seleccionados.join(', ') : 'Ninguno';
+                precioTotal.textContent = `$${(seleccionados.length * precioUnitario).toLocaleString('es-CL')}`;
+
+                localStorage.setItem('asientosSeleccionados', JSON.stringify(seleccionados));
+                localStorage.setItem('totalCompra', (seleccionados.length * precioUnitario).toLocaleString('es-CL'));
+            });
+        });
+    </script>
 </body>
 </html>

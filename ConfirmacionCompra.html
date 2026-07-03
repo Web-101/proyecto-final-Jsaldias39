@@ -14,13 +14,13 @@
             <span class="material-symbols-outlined IconoLogo">movie</span>
             <h1>CINE CINEMA</h1>
         </div>
-        <button class="BotonCerrar material-symbols-outlined">close</button>
+        <a href="homepage.html" class="BotonCerrar material-symbols-outlined" style="text-decoration: none;">close</a>
     </header>
 
     <main>
         <div class="OverlayExito">
             <div class="ModalExito">
-                <button class="BotonCerrarModal material-symbols-outlined">close</button>
+                <a href="homepage.html" class="BotonCerrarModal material-symbols-outlined" style="text-decoration: none;">close</a>
                 
                 <div class="IconoCheckExito">
                     <span class="material-symbols-outlined">check</span>
@@ -41,17 +41,17 @@
                     </div>
                 </div>
 
-                <button class="BotonEntendido">ENTENDIDO</button>
+                <a href="homepage.html" class="BotonEntendido" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">ENTENDIDO</a>
             </div>
         </div>
     </main>
 
     <nav class="Navegacion">
-        <a href="#" class="EnlaceNav">
+        <a href="homepage.html" class="EnlaceNav">
             <span class="material-symbols-outlined">movie_filter</span>
             <span>Cartelera</span>
         </a>
-        <a href="#" class="EnlaceNav Activo">
+        <a href="SeleccionAsientos.html" class="EnlaceNav Activo">
             <span class="material-symbols-outlined">shopping_cart</span>
             <span>Compra</span>
         </a>
@@ -60,5 +60,23 @@
             <span>Perfil</span>
         </a>
     </nav>
+
+    <script src="JavaScript/peliculas.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id') || 'thebatman';
+        const peli = peliculas[movieId];
+        const titulo = peli ? peli.titulo : "Oppenheimer";
+
+        const nombre = localStorage.getItem('nombreCliente') || "Julian";
+        const asientos = JSON.parse(localStorage.getItem('asientosSeleccionados')) || ["H12", "H13"];
+
+        document.querySelector('.TituloExito').textContent = `¡Gracias por tu compra, ${nombre}!`;
+        document.querySelector('.EncabezadoBoleto h3').textContent = titulo;
+        document.querySelectorAll('.EncabezadoBoleto p')[1].textContent = `Asientos: ${asientos.join(', ')}`;
+
+        const boletoNum = `CC - ${Math.floor(1000 + Math.random() * 9000)} - X${Math.floor(100 + Math.random() * 900)}`;
+        document.querySelector('.NumeroBoleto').textContent = boletoNum;
+    </script>
 </body>
 </html>

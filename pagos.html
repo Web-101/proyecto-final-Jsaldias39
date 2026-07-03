@@ -14,7 +14,7 @@
             <span class="material-symbols-outlined IconoLogo">movie</span>
             <h1>CINE CINEMA</h1>
         </div>
-        <button class="BotonCerrar material-symbols-outlined">close</button>
+        <a href="SeleccionAsientos.html" class="BotonCerrar material-symbols-outlined" style="text-decoration: none;">close</a>
     </header>
 
     <main>
@@ -65,20 +65,20 @@
                     <input type="tel" placeholder="+56 9 1234 5678">
                 </div>
 
-                <button type="submit" class="BotonFinalizarCompra">
+                <a href="ConfirmacionCompra.html" class="BotonFinalizarCompra" style="text-decoration: none;">
                     Finalizar Compra <span class="material-symbols-outlined">shopping_cart</span>
-                </button>
+                </a>
                 <p class="TerminosCondiciones">Al hacer click, aceptas nuestros términos y condiciones.</p>
             </form>
         </section>
     </main>
 
     <nav class="Navegacion">
-        <a href="#" class="EnlaceNav">
+        <a href="homepage.html" class="EnlaceNav">
             <span class="material-symbols-outlined">movie_filter</span>
             <span>Cartelera</span>
         </a>
-        <a href="#" class="EnlaceNav Activo">
+        <a href="SeleccionAsientos.html" class="EnlaceNav Activo">
             <span class="material-symbols-outlined">shopping_cart</span>
             <span>Compra</span>
         </a>
@@ -87,5 +87,40 @@
             <span>Perfil</span>
         </a>
     </nav>
+
+    <script src="JavaScript/peliculas.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id') || 'thebatman';
+        const peli = peliculas[movieId];
+
+        if (peli) {
+            document.querySelector('.InfoResumenPelicula h3').textContent = peli.titulo;
+            document.querySelector('.PosterResumen img').src = peli.imagen;
+            document.querySelector('.PosterResumen img').alt = peli.titulo;
+        }
+
+        // Recuperar datos de asientos de localStorage
+        const asientos = JSON.parse(localStorage.getItem('asientosSeleccionados')) || [];
+        const total = localStorage.getItem('totalCompra') || "0";
+
+        const items = document.querySelectorAll('.DetallesResumen li');
+        if (items.length >= 3) {
+            items[1].querySelector('span:last-child').textContent = `Asientos: ${asientos.join(', ') || 'Ninguno'}`;
+            items[2].querySelector('span:last-child').textContent = `${asientos.length} x Entradas General`;
+        }
+        document.querySelector('.PrecioTotalResumen').textContent = `$${total}`;
+
+        // Guardar nombre y actualizar el enlace al hacer clic
+        const btnFinalizar = document.querySelector('.BotonFinalizarCompra');
+        btnFinalizar.addEventListener('click', () => {
+            const nombreInput = document.querySelector('.GrupoInput input[type="text"]').value;
+            localStorage.setItem('nombreCliente', nombreInput || "Cliente");
+            btnFinalizar.href = `ConfirmacionCompra.html?id=${movieId}`;
+        });
+
+        // Mantener contexto de navegación
+        document.querySelector('.BotonCerrar').href = `SeleccionAsientos.html?id=${movieId}`;
+    </script>
 </body>
 </html>
