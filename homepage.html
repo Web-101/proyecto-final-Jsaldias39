@@ -25,79 +25,15 @@
     <main>
         <section class="SeccionCartelera">
             <h2>En Cartelera</h2>
-            <div class="Filtros">
-                <button class="BotonFiltro Activo">Todos</button>
-                <button class="BotonFiltro">Acción</button>
-                <button class="BotonFiltro">Drama</button>
-                <button class="BotonFiltro">Ciencia Ficción</button>
+            <div class="Filtros" id="filtrosCategoria">
+                <button class="BotonFiltro Activo" type="button">Todos</button>
+                <button class="BotonFiltro" type="button">Acción</button>
+                <button class="BotonFiltro" type="button">Drama</button>
+                <button class="BotonFiltro" type="button">Terror</button>
+                <button class="BotonFiltro" type="button">Comedia</button>
             </div>
         </section>
-        <section class="GrillaPeliculas">
-
-            <article class="TarjetaPelicula">
-                <a href="DetallePelicula.html?id=thebatman" style="text-decoration: none; color: inherit;">
-                    <div class="ContenedorImagen">
-                        <span class="Etiqueta EtiquetaEstreno">ESTRENO</span>
-                        <img src="Recursos/thebatman.jpg" alt="The Batman">
-                    </div>
-                    <div class="InfoPelicula">
-                        <h3>The Batman</h3>
-                        <p>Acción &bull; 176 min</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="TarjetaPelicula">
-                <a href="DetallePelicula.html?id=transformers" style="text-decoration: none; color: inherit;">
-                    <div class="ContenedorImagen">
-                        <span class="Etiqueta EtiquetaEstreno">ESTRENO</span>
-                        <img src="Recursos/transformersdarkofthemoon.jpg" alt="Transformers">
-                    </div>
-                    <div class="InfoPelicula">
-                        <h3>Transformers 3</h3>
-                        <p>Acción &bull; 154 min</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="TarjetaPelicula">
-                <a href="DetallePelicula.html?id=lanaranjamecanica" style="text-decoration: none; color: inherit;">
-                    <div class="ContenedorImagen">
-                        <img src="Recursos/lanaranjamecanica.jpg" alt="La Naranja Mecánica">
-                    </div>
-                    <div class="InfoPelicula">
-                        <h3>La Naranja Mecánica</h3>
-                        <p>Drama &bull; 136 min</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="TarjetaPelicula">
-                <a href="DetallePelicula.html?id=ironlung" style="text-decoration: none; color: inherit;">
-                    <div class="ContenedorImagen">
-                        <span class="Etiqueta EtiquetaImax">IMAX</span>
-                        <img src="Recursos/ironlung.jpg" alt="Iron Lung">
-                    </div>
-                    <div class="InfoPelicula">
-                        <h3>Iron Lung</h3>
-                        <p>Terror &bull; 90 min</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="TarjetaPelicula">
-                <a href="DetallePelicula.html?id=jackassforever" style="text-decoration: none; color: inherit;">
-                    <div class="ContenedorImagen">
-                        <img src="Recursos/jackassforever.jpg" alt="Jackass Forever">
-                    </div>
-                    <div class="InfoPelicula">
-                        <h3>Jackass Forever</h3>
-                        <p>Comedia &bull; 96 min</p>
-                    </div>
-                </a>
-            </article>
-
-        </section>
+        <section class="GrillaPeliculas" id="grillaPeliculas"></section>
     </main>
 
     <nav class="Navegacion">
@@ -118,6 +54,8 @@
     <footer>
 
     </footer>
+    <script src="JavaScript/peliculas.js"></script>
+    <script src="JavaScript/Busqueda.js"></script>
 </body>
 
 </html>
