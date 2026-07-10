@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await cargarPeliculas();
     const peliculasLista = Object.entries(peliculas);
     const categoriasUnicas = ['Todos', ...new Set(peliculasLista.map(([, peli]) => peli.categoria))];
 
