@@ -5,7 +5,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get('id') || 'thebatman';
     const peli = peliculas[movieId];
-    const titulo = peli ? peli.titulo : "Oppenheimer";
+    const titulo = peli ? peli.titulo : "The Batman";
 
     document.querySelector('.InfoPeliculaHeader h1').textContent = titulo;
     
