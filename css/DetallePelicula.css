@@ -1,3 +1,4 @@
+/* Estilos Generales y Reset */
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +35,7 @@ header, main, .Navegacion {
     margin: 0 auto;
 }
 
+/* Encabezado (Header) */
 header {
     position: fixed;
     top: 0;
@@ -100,6 +102,7 @@ header {
     transform: scale(0.95);
 }
 
+/* Barra de Navegación */
 .Navegacion {
     position: fixed;
     bottom: 0;
@@ -144,6 +147,7 @@ header {
     font-variation-settings: 'FILL' 1;
 }
 
+/* Hero y Detalles de Película */
 .PeliculaHero {
     position: relative;
     width: 100%;
@@ -359,6 +363,7 @@ main {
     transform: scale(0.97);
 }
 
+/* Estilos de Escritorio (Media Queries) */
 @media (min-width: 768px) {
     body {
         padding-bottom: 0;

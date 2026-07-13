@@ -1,3 +1,4 @@
+/* Cargar base de datos desde la API */
 let peliculas = {};
 
 async function cargarPeliculas() {

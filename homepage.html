@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Encabezado de la página -->
     <header>
         <div class="Logo">
             <span class="material-symbols-outlined IconoLogo">movie</span>
@@ -22,7 +23,9 @@
         </div>
     </header>
 
+    <!-- Contenido principal -->
     <main>
+        <!-- Filtros de categoría -->
         <section class="SeccionCartelera">
             <h2>En Cartelera</h2>
             <div class="Filtros" id="filtrosCategoria">
@@ -33,9 +36,12 @@
                 <button class="BotonFiltro" type="button">Comedia</button>
             </div>
         </section>
+        
+        <!-- Grilla de películas -->
         <section class="GrillaPeliculas" id="grillaPeliculas"></section>
     </main>
 
+    <!-- Barra de navegación inferior / superior -->
     <nav class="Navegacion">
         <a href="homepage.html" class="EnlaceNav Activo">
             <span class="material-symbols-outlined">movie_filter</span>
@@ -54,6 +60,7 @@
     <footer>
 
     </footer>
+    <!-- Scripts de lógica backend y frontend -->
     <script src="JavaScript/peliculas.js"></script>
     <script src="JavaScript/Busqueda.js"></script>
 </body>

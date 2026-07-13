@@ -35,7 +35,7 @@
   "transformers": {
     "titulo": "Transformers 3",
     "categoria": "Acción",
-    "duracion: ": "154 min",
+    "duracion": "154 min",
     "calificacion": "4.7",
     "idioma": "Sub/Esp",
     "sinopsis": "Los Autobots y los Decepticons se involucran en una peligrosa carrera espacial entre los Estados Unidos y la Unión Soviética, lo que podría desencadenar una guerra que destruya la Tierra.",
@@ -161,6 +161,237 @@
         "hora": "23:45 HS",
         "sala": "SALA 1 - 3D",
         "ocupados": ["H1", "H8"]
+      }
+    ]
+  },
+  "caligula": {
+    "titulo": "Calígula",
+    "categoria": "Drama",
+    "duracion": "156 min",
+    "calificacion": "4.2",
+    "idioma": "Sub/Esp",
+    "sinopsis": "Una mirada cruda e íntima al reinado del más infame y depravado emperador de Roma, Calígula, detallando su descenso a la locura, la codicia y el exceso desenfrenado.",
+    "imagen": "Recursos/caligula.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["C3", "C4"]
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": ["A1", "H8"]
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": []
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": ["E2", "E3"]
+      }
+    ]
+  },
+  "comeandsee": {
+    "titulo": "Ven y Mira",
+    "categoria": "Drama",
+    "duracion": "142 min",
+    "calificacion": "4.9",
+    "idioma": "Sub/Esp",
+    "sinopsis": "Durante la Segunda Guerra Mundial, un joven adolescente bielorruso se une al movimiento de resistencia soviético, presenciando los horrores inenarrables de la ocupación nazi en Europa oriental.",
+    "imagen": "Recursos/comeandsee.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["A1", "A2", "A3"]
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": []
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["F4", "F5"]
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": []
+      }
+    ]
+  },
+  "midnightexpress": {
+    "titulo": "Expreso de Medianoche",
+    "categoria": "Drama",
+    "duracion": "121 min",
+    "calificacion": "4.6",
+    "idioma": "Sub/Esp",
+    "sinopsis": "Billy Hayes, un joven estudiante estadounidense, es capturado intentando contrabandear hachís fuera de Turquía y es sentenciado a una brutal e inhumana prisión local de máxima seguridad.",
+    "imagen": "Recursos/midnightexpress.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": []
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": ["C3", "C4", "C5"]
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["H12"]
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": []
+      }
+    ]
+  },
+  "superman": {
+    "titulo": "Superman",
+    "categoria": "Acción",
+    "duracion": "143 min",
+    "calificacion": "4.7",
+    "idioma": "Sub/Esp",
+    "sinopsis": "Un niño huérfano enviado a la Tierra desde el agonizante planeta Krypton crece para convertirse en el primer y más grande superhéroe del planeta, defendiendo a Metrópolis de Lex Luthor.",
+    "imagen": "Recursos/superman.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["A1", "A2", "A3", "A4"]
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": []
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["D3", "D4"]
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": []
+      }
+    ]
+  },
+  "thegreenmile": {
+    "titulo": "Milagros Inesperados",
+    "categoria": "Drama",
+    "duracion": "189 min",
+    "calificacion": "4.9",
+    "idioma": "Sub/Esp",
+    "sinopsis": "Las vidas de los guardias del corredor de la muerte cambian radicalmente al conocer a un gigantesco convicto afroamericano acusado de asesinato, quien posee un don milagroso de sanación.",
+    "imagen": "Recursos/thegreenmile.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": []
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": ["E4", "E5"]
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["A1", "B2"]
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": []
+      }
+    ]
+  },
+  "theirongiant": {
+    "titulo": "El Gigante de Hierro",
+    "categoria": "Drama",
+    "duracion": "86 min",
+    "calificacion": "4.8",
+    "idioma": "Doblada",
+    "sinopsis": "En plena Guerra Fría, un niño de nueve años entabla una entrañable amistad con un gigantesco robot de metal venido del espacio exterior, al que intenta proteger del ejército estadounidense.",
+    "imagen": "Recursos/theirongiant.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["H1", "H2", "H3", "H4"]
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": []
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["A1", "B2"]
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": []
+      }
+    ]
+  },
+  "transformersthemovie": {
+    "titulo": "Transformers: La Película",
+    "categoria": "Acción",
+    "duracion": "84 min",
+    "calificacion": "4.7",
+    "idioma": "Sub/Esp",
+    "sinopsis": "En el año 2005, la épica guerra entre Autobots y Decepticons alcanza su punto máximo cuando el devorador de planetas Unicron surge para amenazar con destruir Cybertron y toda la galaxia.",
+    "imagen": "Recursos/transformersthemovie.jpg",
+    "estreno": "CLÁSICO",
+    "sala": "2D",
+    "funciones": [
+      {
+        "hora": "15:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": []
+      },
+      {
+        "hora": "18:30 HS",
+        "sala": "SALA 2 - IMAX",
+        "ocupados": ["F4", "F5"]
+      },
+      {
+        "hora": "21:00 HS",
+        "sala": "SALA 4 - 2D",
+        "ocupados": ["A3", "B5"]
+      },
+      {
+        "hora": "23:45 HS",
+        "sala": "SALA 1 - 3D",
+        "ocupados": []
       }
     ]
   }

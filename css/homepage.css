@@ -1,3 +1,4 @@
+/* Estilos Generales y Reset */
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +37,7 @@ main,
     margin: 0 auto;
 }
 
+/* Encabezado (Header) */
 header {
     position: fixed;
     top: 0;
@@ -99,6 +101,7 @@ header.Scrolled {
     transform: scale(0.95);
 }
 
+/* Barra de Navegación */
 .Navegacion {
     position: fixed;
     bottom: 0;
@@ -190,6 +193,7 @@ main {
     color: #fff7f6;
 }
 
+/* Grilla y Tarjetas de Películas */
 .GrillaPeliculas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -276,6 +280,7 @@ main {
     color: #e9bcb6;
 }
 
+/* Estilos de Escritorio (Media Queries) */
 @media (min-width: 768px) {
     body {
         padding-bottom: 0;

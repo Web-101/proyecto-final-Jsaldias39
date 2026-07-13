@@ -1,9 +1,12 @@
+/* Carga y renderizado dinámico de los detalles de la película y horarios */
 (async () => {
+    // Obtener película seleccionada desde los parámetros de la URL
     await cargarPeliculas();
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get('id') || 'thebatman';
     const peli = peliculas[movieId];
 
+    // Rellenar los campos HTML con la información de la película
     if (peli) {
         document.querySelector('.TituloPelicula').textContent = peli.titulo;
         document.querySelector('.Sinopsis p').textContent = peli.sinopsis;
@@ -19,11 +22,13 @@
 
         document.querySelector('.PeliculaHero').style.backgroundImage = `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 60%, #000000 100%), url(${peli.imagen})`;
 
+        // Configurar enlace para la página de asientos
         const reservBtn = document.querySelector('.BotonReservar');
         if (reservBtn) {
             reservBtn.href = `SeleccionAsientos.html?id=${movieId}`;
         }
 
+        // Selección interactiva de horarios
         const tarjetasHora = document.querySelectorAll('.TarjetaHora');
         localStorage.setItem('horaSeleccionada', '18:30 HS');
         tarjetasHora.forEach(tarjeta => {

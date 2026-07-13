@@ -1,3 +1,4 @@
+// Inicialización del buscador y filtros de la cartelera
 document.addEventListener('DOMContentLoaded', async () => {
     await cargarPeliculas();
     const peliculasLista = Object.entries(peliculas);
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const normalizarTexto = (texto) => texto.toLowerCase().trim();
 
+    // Plantilla HTML para una película en el buscador
     const crearTarjetaBusqueda = ([id, peli]) => `
         <article class="ResultadoPelicula">
             <a href="DetallePelicula.html?id=${id}" style="text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%;">
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
+    // Plantilla HTML para una película en la cartelera principal (Home)
     const crearTarjetaCartelera = ([id, peli]) => `
         <article class="TarjetaPelicula" data-categoria="${peli.categoria}">
             <a href="DetallePelicula.html?id=${id}" style="text-decoration: none; color: inherit;">
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </article>
     `;
 
+    // Mostrar películas en los resultados de búsqueda
     function mostrarPeliculas(lista) {
         if (!contenedorResultados) {
             return;
@@ -59,6 +63,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         contenedorResultados.innerHTML = lista.map(crearTarjetaBusqueda).join('');
     }
 
+    // Filtrar películas por el buscador de texto
     function filtrarPeliculas() {
         if (!inputBusqueda) {
             return;
@@ -75,6 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         mostrarPeliculas(filtradas);
     }
 
+    // Categorías y filtros para la página de búsqueda
     function renderCategoriasBusqueda() {
         if (!contenedorCategorias) {
             return;
@@ -107,6 +113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // Cargar y filtrar películas en la cartelera principal (Home)
     function renderCartelera() {
         if (!contenedorGrilla) {
             return;

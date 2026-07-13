@@ -1,4 +1,6 @@
+/* Procesamiento del formulario de pago y simulación de compra */
 (async () => {
+    // Cargar películas y rellenar resumen de compra
     await cargarPeliculas();
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get('id') || 'thebatman';
@@ -10,6 +12,7 @@
         document.querySelector('.PosterResumen img').alt = peli.titulo;
     }
 
+    // Mostrar asientos seleccionados y total desde localStorage
     const asientos = JSON.parse(localStorage.getItem('asientosSeleccionados')) || [];
     const total = localStorage.getItem('totalCompra') || "0";
 
@@ -20,6 +23,7 @@
     }
     document.querySelector('.PrecioTotalResumen').textContent = `$${total}`;
 
+    // Validar formulario, registrar asientos en API y redirigir
     const btnFinalizar = document.querySelector('.BotonFinalizarCompra');
     if (btnFinalizar) {
         btnFinalizar.addEventListener('click', async (e) => {
@@ -49,6 +53,7 @@
         });
     }
 
+    // Enlace de regreso a la sala de asientos
     const btnCerrar = document.querySelector('.BotonCerrar');
     if (btnCerrar) {
         btnCerrar.href = `SeleccionAsientos.html?id=${movieId}`;

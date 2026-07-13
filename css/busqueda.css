@@ -1,3 +1,4 @@
+/* Estilos Generales y Reset */
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +37,7 @@ main,
     margin: 0 auto;
 }
 
+/* Encabezado (Header) */
 header {
     position: fixed;
     top: 0;
@@ -90,6 +92,7 @@ header {
     transform: scale(0.95);
 }
 
+/* Barra de Navegación */
 .Navegacion {
     position: fixed;
     bottom: 0;
@@ -179,6 +182,7 @@ main {
     padding: 8px 0;
 }
 
+/* Resultados de Búsqueda */
 .ResultadosBusqueda {
     display: flex;
     flex-direction: column;
@@ -239,6 +243,7 @@ main {
     font-size: 24px;
 }
 
+/* Estilos de Escritorio (Media Queries) */
 @media (min-width: 768px) {
     body {
         padding-bottom: 0;
