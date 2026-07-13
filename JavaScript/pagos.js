@@ -17,7 +17,10 @@
     const total = localStorage.getItem('totalCompra') || "0";
 
     const items = document.querySelectorAll('.DetallesResumen li');
+    const hora = localStorage.getItem('horaSeleccionada') || '18:30 HS';
+    const sala = peli && peli.funciones ? (peli.funciones.find(f => f.hora === hora)?.sala || "SALA 2 - IMAX") : "SALA 2 - IMAX";
     if (items.length >= 3) {
+        items[0].querySelector('span:last-child').textContent = `Hoy, ${hora} | ${sala}`;
         items[1].querySelector('span:last-child').textContent = `Asientos: ${asientos.join(', ') || 'Ninguno'}`;
         items[2].querySelector('span:last-child').textContent = `${asientos.length} x Entradas General`;
     }

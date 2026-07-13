@@ -12,8 +12,11 @@
     const asientos = JSON.parse(localStorage.getItem('asientosSeleccionados')) || ["H12", "H13"];
 
     // Rellenar ticket con datos reales del usuario
+    const hora = localStorage.getItem('horaSeleccionada') || '18:30 HS';
+    const sala = peli && peli.funciones ? (peli.funciones.find(f => f.hora === hora)?.sala || "SALA 2 - IMAX") : "SALA 2 - IMAX";
     document.querySelector('.TituloExito').textContent = `¡Gracias por tu compra, ${nombre}!`;
     document.querySelector('.EncabezadoBoleto h3').textContent = titulo;
+    document.querySelectorAll('.EncabezadoBoleto p')[0].textContent = `Hoy, ${hora} | ${sala}`;
     document.querySelectorAll('.EncabezadoBoleto p')[1].textContent = `Asientos: ${asientos.join(', ')}`;
 
     // Generar código aleatorio para simular el boleto

@@ -15,6 +15,8 @@
     // Obtener asientos ocupados de la función seleccionada desde el backend
     const hora = localStorage.getItem('horaSeleccionada') || '18:30 HS';
     const funcion = peli && peli.funciones ? peli.funciones.find(f => f.hora === hora) : null;
+    const sala = funcion ? funcion.sala : "SALA 2 - IMAX";
+    document.querySelector('.InfoPeliculaHeader p').textContent = `Hoy ${hora} | ${sala}`;
     const ocupados = funcion ? funcion.ocupados : [];
 
     // Marcar visualmente los asientos ocupados según el estado del backend
